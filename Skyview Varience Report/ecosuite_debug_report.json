@@ -1,0 +1,83 @@
+{
+  "api_calls": [
+    {
+      "endpoint": "https://api.ecosuite.io/projects/JLHS",
+      "method": "GET",
+      "status_code": 200,
+      "timestamp": "2025-04-04T23:55:17.922155",
+      "response_time": 0.899787
+    },
+    {
+      "endpoint": "https://api.ecosuite.io/projects/JLHS/pro-forma",
+      "method": "GET",
+      "status_code": 200,
+      "timestamp": "2025-04-04T23:55:18.491668",
+      "response_time": 0.565678
+    },
+    {
+      "endpoint": "https://api.ecosuite.io/energy/datums/projects/JLHS",
+      "method": "GET",
+      "status_code": 200,
+      "timestamp": "2025-04-04T23:55:22.574269",
+      "response_time": 4.076919
+    },
+    {
+      "endpoint": "https://api.ecosuite.io/energy/datums/generation/expected",
+      "method": "GET",
+      "status_code": 504,
+      "timestamp": "2025-04-04T23:55:51.790451",
+      "response_time": 29.211176
+    },
+    {
+      "endpoint": "https://api.ecosuite.io/energy/datums/generation/expected?start=2025-02-01&end=2025-03-01&projectIds=JLHS&aggregation=day",
+      "method": "GET",
+      "status_code": 200,
+      "timestamp": "2025-04-04T23:55:56.068061",
+      "response_time": 4.274804
+    },
+    {
+      "endpoint": "https://api.ecosuite.io/weather/datums/projects/JLHS",
+      "method": "GET",
+      "status_code": 400,
+      "timestamp": "2025-04-04T23:55:56.404292",
+      "response_time": 0.33338
+    },
+    {
+      "endpoint": "https://data.solarnetwork.net/solarquery/api/v1/sec/datum/list?aggregation=Day&endDate=2025-03-02T04%3A59%3A59.9999Z&nodeIds=739&sourceIds=%2FJLHS%2FS1%2FR1%2FWEATHER%2F1&startDate=2025-02-01T05%3A00%3A00.0000Z",
+      "method": "GET",
+      "status_code": 403,
+      "timestamp": "2025-04-04T23:55:57.525698",
+      "response_time": 1.080759
+    }
+  ],
+  "errors": [
+    {
+      "context": "fetch_expected_generation",
+      "error_type": "Exception",
+      "error_message": "Error 504: {\"message\": \"Endpoint request timed out\"}",
+      "traceback": "NoneType: None\n",
+      "timestamp": "2025-04-04T23:55:51.791255"
+    },
+    {
+      "context": "fetch_ecosuite_weather_datums",
+      "error_type": "Exception",
+      "error_message": "Error 400: {\"message\":\"Cannot read properties of undefined (reading 'filter')\",\"error\":\"TypeError: Cannot read properties of undefined (reading 'filter')\"}",
+      "traceback": "NoneType: None\n",
+      "timestamp": "2025-04-04T23:55:56.404358"
+    },
+    {
+      "context": "SolarNetwork API",
+      "error_type": "Exception",
+      "error_message": "Unsuccessful API call: {'success': False, 'message': 'Invalid HTTP X-SN-Date header value'}",
+      "traceback": "NoneType: None\n",
+      "timestamp": "2025-04-04T23:55:57.525791"
+    },
+    {
+      "context": "SolarNetwork API",
+      "error_type": "Exception",
+      "error_message": "Unsuccessful API call",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/balasainadhkesana/Desktop/Ecosuite/Skyview Varience Report/main.py\", line 508, in list\n    raise Exception(\"Unsuccessful API call\")\nException: Unsuccessful API call\n",
+      "timestamp": "2025-04-04T23:55:57.532895"
+    }
+  ]
+}

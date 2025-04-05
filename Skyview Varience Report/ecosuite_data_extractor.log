@@ -1,0 +1,42 @@
+2025-04-04 23:55:17,922 - INFO - [main.py:123] - Successfully fetched project details
+2025-04-04 23:55:17,925 - INFO - [main.py:73] - Data successfully saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/JLHS_2025-02-01_2025-02-28_project_details.json
+2025-04-04 23:55:18,491 - INFO - [main.py:152] - Successfully fetched price data
+2025-04-04 23:55:18,493 - INFO - [main.py:73] - Data successfully saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/JLHS_2025-02-01_2025-02-28_price_data.json
+2025-04-04 23:55:22,574 - INFO - [main.py:212] - Successfully fetched energy datums
+2025-04-04 23:55:22,578 - INFO - [main.py:221] - Energy datums saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/JLHS_2025-02-01_2025-02-28_energy_datums.json
+2025-04-04 23:55:51,791 - ERROR - [main.py:55] - Error in fetch_expected_generation: Error 504: {"message": "Endpoint request timed out"}
+2025-04-04 23:55:56,068 - INFO - [main.py:281] - Successfully fetched expected generation data with projectIds=JLHS
+2025-04-04 23:55:56,070 - INFO - [main.py:290] - Expected generation data with projectIds saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/expected_generation_JLHS.json
+2025-04-04 23:55:56,404 - ERROR - [main.py:55] - Error in fetch_ecosuite_weather_datums: Error 400: {"message":"Cannot read properties of undefined (reading 'filter')","error":"TypeError: Cannot read properties of undefined (reading 'filter')"}
+2025-04-04 23:55:57,525 - ERROR - [main.py:55] - Error in SolarNetwork API: Unsuccessful API call: {'success': False, 'message': 'Invalid HTTP X-SN-Date header value'}
+2025-04-04 23:55:57,532 - ERROR - [main.py:55] - Error in SolarNetwork API: Unsuccessful API call
+2025-04-04 23:55:57,533 - ERROR - [main.py:600] - Error fetching SolarNetwork weather data for system R1: Unsuccessful API call
+2025-04-04 23:55:57,535 - INFO - [main.py:613] - SolarNetwork weather data saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/JLHS_2025-02-01_2025-02-28_solarnetwork_weather.json
+2025-04-04 23:55:57,536 - INFO - [main.py:822] - Loaded energy data successfully
+2025-04-04 23:55:57,537 - INFO - [main.py:829] - Loaded expected generation data successfully
+2025-04-04 23:55:57,537 - INFO - [main.py:836] - Loaded price data successfully
+2025-04-04 23:55:57,538 - INFO - [main.py:843] - Loaded project details successfully
+2025-04-04 23:55:57,538 - INFO - [main.py:863] - Found forecast generation for february: 47428 kWh
+2025-04-04 23:55:57,538 - INFO - [main.py:876] - Found monthly irradiance data
+2025-04-04 23:55:57,540 - INFO - [main.py:945] - Found PPA rate: 0.082
+2025-04-04 23:55:57,540 - INFO - [main.py:949] - Found SREC Revenue cashflow
+2025-04-04 23:55:57,541 - INFO - [main.py:952] - Recurrence type: monthly
+2025-04-04 23:55:57,541 - INFO - [main.py:969] - Looking for REC rate for february in year 7
+2025-04-04 23:55:57,541 - INFO - [main.py:970] - Available years: 16
+2025-04-04 23:55:57,541 - INFO - [main.py:975] - Year rates: {'november': 0.059, 'june': 0.059, 'september': 0.059, 'may': 0.059, 'august': 0.059, 'january': 0.059, 'february': 0.059, 'july': 0.059, 'december': 0.059, 'october': 0.059, 'april': 0.059, 'march': 0.059}
+2025-04-04 23:55:57,541 - INFO - [main.py:978] - Found REC rate: 0.059
+2025-04-04 23:55:57,541 - INFO - [main.py:983] - PPA Rate: 0.082, REC Rate: 0.059
+2025-04-04 23:55:57,541 - INFO - [main.py:1005] - Total expected generation: 47828.152156000004 kWh
+2025-04-04 23:55:57,541 - INFO - [main.py:1017] - Irradiance hours: 80643.5
+2025-04-04 23:55:57,541 - INFO - [main.py:1038] - Total actual generation: 36452.52 kWh
+2025-04-04 23:55:57,542 - ERROR - [main.py:1140] - Error generating CSV report: dict contains fields not in fieldnames: 'Actual RECs Revenue ($)'
+Traceback (most recent call last):
+  File "/Users/balasainadhkesana/Desktop/Ecosuite/Skyview Varience Report/main.py", line 1097, in generate_csv_report
+    writer.writerow({
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/csv.py", line 154, in writerow
+    return self.writer.writerow(self._dict_to_list(rowdict))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'Actual RECs Revenue ($)'
+2025-04-04 23:55:57,545 - INFO - [main.py:73] - Data successfully saved to Jonathan Law High School_2025-02-01_2025-02-28/raw_data/JLHS_2025-02-01_2025-02-28_metadata.json
+2025-04-04 23:55:57,546 - INFO - [main.py:61] - Debug report exported to ecosuite_debug_report.json
